@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProfileService } from '../services/profile.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
+
+
+  constructor (private profileService: ProfileService) {}
 
 }
