@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 125%;
+    font-family: 'Raleway', sans-serif;
+
+    --font-seize-1: 2.25rem;
+    --font-seize-2: 1.75rem;
+    --font-seize-3: 1.25rem;
+    --font-seize-4: 1rem;
+    --font-seize-5: 0.75rem;
+
+    --color-blue-1: #1c6cf9;
+    --color-blue-2: #33489d;
+    --color-blue-3: #141e41;
+
+    --color-pink-1: #f42771;
+
+    --color-black-1: #181818;
+
+}
+
