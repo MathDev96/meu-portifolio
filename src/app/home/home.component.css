@@ -39,9 +39,21 @@ b {
     }
 }
 
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em; /* Espaçamento entre as letras */
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+}
+
 .banner .box .title1 {
     font-size: var(--font-size-3);
-    
 }
 
 .banner .box .title2 {
