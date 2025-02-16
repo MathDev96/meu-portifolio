@@ -36,6 +36,7 @@ nav ul li {
 nav ul li a {
     font-size: var(--font-size-5);
     text-decoration: none;
+    color: inherit;
 }
 
 nav ul li a:hover {
