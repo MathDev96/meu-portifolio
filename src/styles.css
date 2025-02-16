@@ -10,11 +10,11 @@
     font-size: 125%;
     font-family: 'Raleway', sans-serif;
 
-    --font-seize-1: 2.25rem;
-    --font-seize-2: 1.75rem;
-    --font-seize-3: 1.25rem;
-    --font-seize-4: 1rem;
-    --font-seize-5: 0.75rem;
+    --font-size-1: 2.25rem;
+    --font-size-2: 1.75rem;
+    --font-size-3: 1.25rem;
+    --font-size-4: 1rem;
+    --font-size-5: 0.75rem;
 
     --color-blue-1: #1c6cf9;
     --color-blue-2: #33489d;
@@ -25,4 +25,3 @@
     --color-black-1: #181818;
 
 }
-

@@ -1,7 +1,7 @@
 .banner {
     display: flex;
     justify-content: center;
-    background: linear-gradient(180deg, var(--color-blue-2)15%, var(--color-clue-3) 100%);
+    background: linear-gradient(180deg, var(--color-blue-2)15%, var(--color-blue-3) 100%);
     color: white;
     padding-top: 70px;
     text-align: center;
@@ -21,14 +21,34 @@
     color: #fff;
 }
 
+b {
+    background: linear-gradient(90deg, #fff, #007bff, #fff);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: b 3s infinite alternate linear;
+}
+
+@keyframes b {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 .banner .box .title1 {
     font-size: var(--font-size-3);
+    
 }
 
 .banner .box .title2 {
     font-size: var(--font-size-1);
     display: block;
-    max-width: 450px;
+    max-width: 550px;
+    margin: 15px 0;
 }
 
 .banner .box .buttons {
@@ -53,4 +73,12 @@
     background: var(--color-blue-1);
     color: #fff;
     text-wrap: nowrap;
+}
+
+.banner .box .buttons a:hover {
+    background: var(--color-blue-2);
+}
+
+.banner .box .buttons a i {
+    margin-right: 5px;
 }
