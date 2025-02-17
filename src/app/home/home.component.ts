@@ -1,11 +1,10 @@
 import { Component, Inject, PLATFORM_ID, AfterViewInit, OnDestroy } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
