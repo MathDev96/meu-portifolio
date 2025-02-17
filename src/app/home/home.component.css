@@ -34,6 +34,7 @@ b {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 100% 50%;
     }
@@ -44,12 +45,30 @@ b {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: .15em; /* Espaçamento entre as letras */
+    letter-spacing: .15em;
+    /* Espaçamento entre as letras */
     animation: blink-caret .75s step-end infinite;
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent }
+
+    from,
+    to {
+        border-color: transparent
+    }
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    /* Ajuste conforme necessário */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .banner .box .title1 {

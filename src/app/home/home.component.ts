@@ -1,30 +1,47 @@
-import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../services/profile.service';
+import { Component, Inject, PLATFORM_ID, AfterViewInit, OnDestroy } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
-  
-  constructor(private profileService: ProfileService) { }
-  
-  typingText: string = ''; // Texto que será exibido com o efeito de digitação
-  fullText: string = 'Olá! Seja bem-vindo!'; // Texto completo
-  typingSpeed: number = 100; // Velocidade da digitação em milissegundos
+export class HomeComponent implements AfterViewInit, OnDestroy {
 
+  typingText: string = ''; 
+  fullText: string = 'Olá! Seja bem-vindo!';
+  typingSpeed: number = 100;
+  deleteSpeed: number = 50;
+  resetDelay: number = 8000;
+  
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
-  ngOnInit(): void {
-    this.typeWriter(); // Inicia o efeito de digitação quando o componente é carregado
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => this.typeWriter(), 500);
+    }
   }
 
   typeWriter(): void {
     if (this.typingText.length < this.fullText.length) {
-      this.typingText += this.fullText[this.typingText.length]; // Adiciona uma letra por vez
-      setTimeout(() => this.typeWriter(), this.typingSpeed); // Chama a função novamente após um intervalo
+      this.typingText += this.fullText[this.typingText.length];
+      setTimeout(() => this.typeWriter(), this.typingSpeed);
+    } else {
+      setTimeout(() => this.deleteText(), this.resetDelay);
     }
   }
+
+  deleteText(): void {
+    if (this.typingText.length > 0) {
+      this.typingText = this.typingText.slice(0, -1);
+      setTimeout(() => this.deleteText(), this.deleteSpeed);
+    } else {
+      setTimeout(() => this.typeWriter(), 1000);
+    }
+  }
+
+  ngOnDestroy(): void {}
 }
