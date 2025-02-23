@@ -158,13 +158,38 @@ b {
     font-weight: 400
 }
 
+/* Box skills */
+
+.skills {
+    background: var(--color-black-1);
+}
+.skills .box h2, h3, h4 {
+    color: #fff;
+}
+
+.skills .box h3 {
+    margin: 5px;
+    font-size: var(--font-size-4);
+}
+
+.skills .box .items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+
+
 @media (min-width: 768px) {
     .about .box {
         flex-direction: row;
     }
-
+    .text {
+        margin: 40px 20px 0 0;
+    }
     .about .box .img img {
-        max-width: 100%;
+       width: 80%;
     }
 
     .about .box .text {
