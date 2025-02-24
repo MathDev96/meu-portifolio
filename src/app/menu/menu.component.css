@@ -1,6 +1,6 @@
 nav {
     box-shadow: 0 4px 17px #0000004d;
-    background: #fff;
+    background: #333;
     position: fixed;
     width: 100%;
     display: flex;
@@ -47,6 +47,7 @@ nav i {
     font-size: 45px;
     margin: 0 15px;
     cursor: pointer;
+    color: #fff;
 }
 
 @media (min-width: 768px) {
