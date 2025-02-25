@@ -17,8 +17,9 @@ nav ul {
     list-style: none;
     position: absolute;
     top: 70px;
-    background: #fff;
+    background: #333;
     width: 100%;
+    color: #fff;
 }
 
 nav ul.open {
