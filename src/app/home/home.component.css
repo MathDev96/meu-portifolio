@@ -219,6 +219,22 @@ h4 {
     margin-top: 15px;
 }
 
+/* Box Projects */
+
+.projects .box h3 {
+    margin: 5px 0 20px;
+    font-size: var(--font-size-4);
+}
+
+.projects .box .project {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.projects .box .project.reverse {
+    flex-direction: column-reverse;
+}
 
 @media (min-width: 768px) {
     .about .box {
