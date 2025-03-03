@@ -127,7 +127,7 @@ b {
 .about .box {
     display: flex;
     flex-direction: column;
-    background: #333;
+    background: #202020;
     padding-bottom: 40px;
 }
 
@@ -148,6 +148,7 @@ b {
 .about .box .text h2 {
     color: #fff;
     margin: 0 5px;
+    font-size: var(--font-size-2);
 }
 
 .about .box .text h3 {
@@ -177,6 +178,7 @@ b {
     color: #000;
     text-align: center;
     margin-top: 20px;
+    font-size: var(--font-size-2);
 }
 
 .skills .box
@@ -220,23 +222,92 @@ h4 {
 }
 
 /* Box Projects */
+.projects {
+    background: #202020;
+}
+
+.projects .box h2 {
+    color: #fff;
+    padding-top: 20px;
+    margin: 0 10px;
+    font-size: var(--font-size-2);
+}
 
 .projects .box h3 {
-    margin: 5px 0 20px;
+    margin: 5px 10px;
     font-size: var(--font-size-4);
+    color: #fff;
 }
 
 .projects .box .project {
     display: flex;
     flex-direction: column;
-    margin: 50px 0;
+    margin: 30px 0;
 }
 
 .projects .box .project.reverse {
     flex-direction: column-reverse;
 }
 
+.project .box .project .img {
+    flex: 1;
+}
+
+.projects .box .project .text {
+    flex: 1;
+    margin-bottom: 15px;
+    margin: 0 10px;
+}
+
+.projects .box .project .img img {
+    max-width: 700px;
+}
+.projects .box .project .text p {
+    color: #fff;
+}
+.projects .box .project .text h4 {
+    font-size: var(--font-size-3);
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.projects .box .project .text .buttons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.projects .box .project .text .buttons a {
+    display: inline-flex;
+    border-radius: 45px;
+    color: #fff;
+    height: 30px;
+    background: #181616;
+    margin-right: 15px;
+    padding: 0 12px;
+    align-items: center;
+    font-size: var(--font-size-5);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.projects .box .project .text .buttons a.live {
+    background: var(--color-pink-1);
+}
+
+.projects .box .project .text .buttons a svg,
+.projects .box .project .text .buttons a i {
+    width: 20px;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
 @media (min-width: 768px) {
+
+    .projects .box .project, 
+    .projects .box .project.reverse {
+        flex-direction: row;
+    }
+
     .about .box {
         flex-direction: row;
     }
