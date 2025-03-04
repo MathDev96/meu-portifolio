@@ -1,5 +1,7 @@
 import { Component, Inject, PLATFORM_ID, AfterViewInit, OnDestroy } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { ProfileService } from '../services/profile.service';
+import { Profile } from '../models/profile';
 
 @Component({
   selector: 'app-home',
@@ -15,8 +17,10 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   typingSpeed: number = 100;
   deleteSpeed: number = 50;
   resetDelay: number = 8000;
-  
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+  profile?: Profile;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: object, 
+  private profileService: ProfileService) {}
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -43,4 +47,8 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {}
+
+  ngOnInit() {
+    this.profile = this.profileService.getProfile();
+  }
 }
